@@ -26,6 +26,13 @@ export class RecipesService {
     return [...this.recipes];
   }
   getRecipe(recipeId: string) {
-    return { ...this.recipes.find(recipe => recipe.id === recipeId) };
+    // eslint-disable-next-line arrow-body-style
+    return { ...this.recipes.find(recipe => { return recipe.id === recipeId; }) };
+  }
+  deleteRecipe(recipeId: string) {
+    // eslint-disable-next-line arrow-body-style
+    this.recipes = this.recipes.filter(recipe => { return recipe.id !== recipeId; });
+    console.log(this.recipes);
+
   }
 }

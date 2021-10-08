@@ -12,7 +12,8 @@ recipes: Recipe[];
   constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
-this.recipes=this.recipesService.getAllRecipes();
+
+    this.recipes=this.recipesService.getAllRecipes();
   }
 
 }
