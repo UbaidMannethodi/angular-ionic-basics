@@ -30,7 +30,6 @@ export class RecipeDetailPage implements OnInit {
 
     });
   }
-
   onDeleteRecipe() {
     //creating alert
     this.alertContr.create({
